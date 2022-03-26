@@ -1,0 +1,112 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: consolas;
+}
+.navbar{
+	color: #f1f1f1;
+	background-color: rgba(12,12,12,0.95);
+	position: fixed;
+	height: 60px;
+    align-items: center;
+	width: 100%;
+	margin: 0;
+	z-index: 999;
+}
+.navbar ul{
+	float: right;
+	list-style: none;
+	display: flex;
+	margin-right: 10vw;
+	margin-top: 20px;
+}
+.navbar ul a{
+	padding: 10px;
+    color: f1f1f1;
+    text-decoration: none;
+    margin-left: 2vw;
+}
+section{
+	background-color: 0c0c0c;
+	padding: 60px;
+}
+section h2{
+	margin-top: 50px;
+	font-size: 2.5em;
+	color: #f1f1f1;
+}
+section p{
+	color: #f1f1f1;
+	font-size: 1.2em;
+}
+::-webkit-scrollbar{
+	width: 0;
+}
+.logo{
+	height: 4em;
+	position: fixed;
+	top: 5;
+}
+.codeColor{
+	
+	color: linear-gradient(to right, #008aff,#00ffe7);
+	animation: animate 10s infinite;
+}
+.text1{
+	margin-top: 20px;
+}
+.text2{
+	margin-top: 50px;
+}
+.text3{
+	margin-top: 1000px;
+}
+#scrollPath{
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 10px;
+	height: 100%;
+	background: rgba(255,255,255,0.05);
+	z-index: 1000;
+}
+#progressbar{
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 10px;
+	background: linear-gradient(to top, #008aff,#00ffe7);
+	animation: animate 10s linear infinite;
+	z-index: 1000;
+}
+@keyframes animate
+{
+	0,100%
+	{
+		filter: hue-rotate(0deg);
+	}
+	50%
+	{
+		filter: hue-rotate(360deg);
+	}
+}
+#progressbar:before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to top, #008aff,#00ffe7);
+	filter: blur(30px);	
+}
+#progressbar:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to top, #008aff,#00ffe7);
+	filter: blur(30px);	
+}
