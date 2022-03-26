@@ -1,0 +1,38 @@
+<html>
+  <head>
+	  <link rel="stylesheet" href="stylesheet.css"/>
+	  <title>CasuallyHUB</title>
+  </head>
+  <body>
+	  <div id="progressbar"></div>
+	  <div id="scrollPath"></div>
+	  <div class="navbar">
+		  <ul>
+			  <li><a href="projects.html">.projects</a></li>
+			  <li><a href="about.html">.about</a></li>
+			  <li><a href="contact.html">.contact</a></li>
+		  </ul>
+	  </div>
+	  <section>
+		  <h2>CasuallyGG<span class="codeColor">.load()</span></h2>
+		  <p class="text1">
+			  Casually loaded... beginning bootup... beep boop...
+		  </p>
+		  <p class="text2">
+			  German high school student, Gamer,<br>
+			  coding passionate, and casual web designer.
+		  </p>
+		  <p class="text3">
+			  This is just a test...
+		  </p>
+	  </section>
+	  <script>
+		  let progress = document.getElementById('progressbar');
+		  window.onscroll = function(){
+			  let totalHeight = document.body.scrollHeight - window.innerHeight;
+			  let progressHeight = (window.pageYOffset / totalHeight) * 100;
+			  progress.style.height = progressHeight + "%";
+		  }
+	  </script>
+  </body>
+</html>
