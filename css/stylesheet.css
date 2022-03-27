@@ -48,9 +48,15 @@ section p{
 	top: 5;
 }
 .codeColor{
-	
-	color: linear-gradient(to right, #008aff,#00ffe7);
-	animation: animate 10s infinite;
+	background: linear-gradient(to right, #008aff,#00ffe7);
+	background-size: 300%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 900;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: animate 10s ease-in-out infinite;
+	-moz-animation: animate 10s ease-in-out infinite;
+	-webkit-animation: animate 10s ease-in-out infinite;
 }
 .text1{
 	margin-top: 20px;
