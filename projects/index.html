@@ -1,0 +1,50 @@
+<html>
+  <head>
+	  <link rel="apple-touch-icon" href="/images/CasuallyDev.png">
+	  <link rel="apple-touch-startup-image" href="/images/CasuallyDev.png">
+	  <meta name="apple-mobile-web-app-title" content="CasuallyDev">
+	  <meta name="apple-mobile-web-app-capable" content="yes">
+	  <link rel="stylesheet" href="css/stylesheet.css"/>
+	  <title>CasuallyDev</title>
+  </head>
+  <body>
+	  <div id="progressbar"></div>
+	  <div id="scrollPath"></div>
+	  <div class="navbar">
+		  <ul>
+			  <li><a href="projects.html">.projects</a></li>
+			  <li><a href="about.html">.about</a></li>
+			  <li><a href="contact.html">.contact</a></li>
+		  </ul>
+	  </div>
+	  <section>
+		  <h2>Projects<span class="codeColor">.load()</span></h2>
+		  <p class="text1">
+			  Projects loaded... beginning bootup... beep boop...
+		  </p>
+		  <p class="text2">
+        .
+		  </p>
+		  <p class="text3">
+			  This is just a test...
+			  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel. Interdum velit euismod in pellentesque. Eget dolor morbi non arcu. Feugiat in ante metus dictum at. A condimentum vitae sapien pellentesque. Aenean et tortor at risus viverra adipiscing at. Pharetra convallis posuere morbi leo urna molestie. Vitae congue mauris rhoncus aenean vel. Proin libero nunc consequat interdum. Pulvinar sapien et ligula ullamcorper malesuada. Odio ut enim blandit volutpat maecenas volutpat blandit. Quis risus sed vulputate odio ut enim blandit volutpat. Nunc vel risus commodo viverra maecenas accumsan. Risus feugiat in ante metus dictum at tempor commodo ullamcorper. Fringilla phasellus faucibus scelerisque eleifend donec pretium.
+
+Scelerisque felis imperdiet proin fermentum. Egestas erat imperdiet sed euismod nisi porta lorem. Risus in hendrerit gravida rutrum quisque non. Velit laoreet id donec ultrices. Vestibulum morbi blandit cursus risus at ultrices mi. Quisque id diam vel quam elementum pulvinar etiam non quam. Pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae. Vulputate odio ut enim blandit volutpat. Lobortis feugiat vivamus at augue eget. At varius vel pharetra vel turpis.
+
+Justo laoreet sit amet cursus sit amet dictum sit amet. Enim ut tellus elementum sagittis vitae et leo duis ut. Feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi. Bibendum at varius vel pharetra. Massa vitae tortor condimentum lacinia quis vel eros donec ac. Purus ut faucibus pulvinar elementum integer enim. Urna id volutpat lacus laoreet. Eu facilisis sed odio morbi quis commodo. Fermentum leo vel orci porta non pulvinar neque laoreet suspendisse. Nunc congue nisi vitae suscipit tellus mauris a. Sociis natoque penatibus et magnis dis parturient montes nascetur. Urna condimentum mattis pellentesque id nibh tortor id aliquet lectus. Pharetra diam sit amet nisl suscipit adipiscing. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. At risus viverra adipiscing at in tellus integer feugiat scelerisque. Ligula ullamcorper malesuada proin libero nunc consequat interdum varius.
+
+Dolor magna eget est lorem ipsum dolor. Quisque egestas diam in arcu cursus. Sit amet consectetur adipiscing elit ut aliquam purus sit. Imperdiet sed euismod nisi porta. Amet risus nullam eget felis. Commodo elit at imperdiet dui accumsan sit. Eu feugiat pretium nibh ipsum consequat nisl vel pretium. Et malesuada fames ac turpis egestas. Viverra mauris in aliquam sem fringilla ut morbi tincidunt augue. Cras ornare arcu dui vivamus arcu. Condimentum mattis pellentesque id nibh tortor. Bibendum arcu vitae elementum curabitur vitae nunc sed velit dignissim. Nec nam aliquam sem et tortor. Mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus.
+
+Dolor sit amet consectetur adipiscing elit ut aliquam purus. Id velit ut tortor pretium viverra suspendisse potenti. Sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc. Mauris augue neque gravida in fermentum. Viverra adipiscing at in tellus integer feugiat. At erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Lectus sit amet est placerat. Convallis posuere morbi leo urna molestie at elementum eu. Orci phasellus egestas tellus rutrum tellus pellentesque. Sem integer vitae justo eget magna fermentum iaculis. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit. Imperdiet proin fermentum leo vel orci porta non pulvinar neque. Volutpat sed cras ornare arcu dui. Elit eget gravida cum sociis natoque penatibus et magnis dis. Tellus in metus vulputate eu. Lobortis scelerisque fermentum dui faucibus in ornare quam viverra.
+		  </p>
+	  </section>
+	  <script>
+		  let progress = document.getElementById('progressbar');
+		  window.onscroll = function(){
+			  let totalHeight = document.body.scrollHeight - window.innerHeight;
+			  let progressHeight = (window.pageYOffset / totalHeight) * 100;
+			  progress.style.height = progressHeight + "%";
+		  }
+	  </script>
+  </body>
+</html>
