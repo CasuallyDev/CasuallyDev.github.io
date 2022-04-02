@@ -1,10 +1,11 @@
 <html>
 <head>
-    <link rel="stylesheet" href="style1.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="RonaldoLogo.png">
+	<link rel="stylesheet" href="style1.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" href="RonaldoLogo.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontaktformular</title>
+	<meta charset="UTF-8">
+	<title>Kontaktformular</title>
 </head>
 <body>
 	<div id="backgrounddarkener"></div>
@@ -75,38 +76,30 @@
 				document.getElementByID("fixedButton").className = "fixedButton";
 			}
 		}
-</script>
-<script>
 		function openNav() {
   			document.getElementById("mySidebar").style.width = "250px";
 		}
 		function closeNav() {
   			document.getElementById("mySidebar").style.width = "0";
 		}
-</script>
-	<script>
 		let progress = document.getElementById('progressBar');
 		window.onscroll = function(){
 			let totalHeight = document.body.scrollHeight - window.innerHeight;
 			let progressHeight = (window.pageYOffset / totalHeight) * 100;
 			progress.style.height = progressHeight + "%";
 		}
-	</script>
-<script>
-//Ein bisschen Spaß muss auch mal sein :D (übrigens auch selber geschrieben)
+		//Ein bisschen spaß muss auch mal sein :D
+		document.querySelector("#play").addEventListener("click", () => {
+   		document.querySelector("#video").play();
+    		document.getElementById("video").style.height = "100%";
+		document.getElementById("backgrounddarkener").style.height = "100%";
+    		setTimeout(function() { stopVideo(); }, 9400);
+    		});
 
-    document.querySelector("#play").addEventListener("click", () => {
-    document.querySelector("#video").play();
-    document.getElementById("video").style.height = "100%";
-	document.getElementById("backgrounddarkener").style.height = "100%";
-    setTimeout(function() { stopVideo(); }, 9400);
-    });
-
-    function stopVideo() {
-    document.getElementById("video").style.height = "0";
-	document.getElementById("backgrounddarkener").style.height = "0";
-    }
-
+    		function stopVideo() {
+    		document.getElementById("video").style.height = "0";
+		document.getElementById("backgrounddarkener").style.height = "0";
+   		}
 </script>
 </body>
 </html>
