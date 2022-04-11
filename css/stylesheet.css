@@ -103,6 +103,7 @@ nav > a:focus:before {
   visibility: visible;
   transform: scaleX(1);
 }
+
 @media screen and (max-width: 1100px){
 	#home h1{
 		font-size: 3em;
