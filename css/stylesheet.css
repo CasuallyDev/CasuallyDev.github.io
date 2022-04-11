@@ -2,50 +2,79 @@
 	margin: 0;
 	padding: 0;
 	font-family: consolas;
+	scroll-behavior: smooth;
+}
+body{
+	background-color: #222222;
+}
+ul{
+	background: transparent;
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	background-color: transparent;
+	color: #f1f1f1;
+}
+body{
+	color: #f1f1f1;
+}
+.SideMenu{
+	background: transparent;
+	position: fixed;
+	right: 25px;
+	bottom: 25px;
+	transform-origin: bottom right;
+	transform: rotate(-90deg) translateX(100%);
+	z-index: 10;
+	width: 100%;
+}
+.sideMenu ul{
+	display: inline-block;
+	margin-right: 20px;
+}
+.SideMenu li{
+	display: inline-block;
+	margin-right: 20px;
 }
 .navbar{
-	color: #f1f1f1;
-	background-color: rgba(12,12,12,0.95);
+	background-color: transparent;
 	position: fixed;
-	height: 60px;
-    align-items: center;
-	width: 100%;
-	margin: 0;
-	z-index: 999;
+	top: 25;
+	right: 25;
+	z-index: 1;
 }
-.navbar ul{
-	float: right;
-	list-style: none;
-	display: flex;
-	margin-right: 10vw;
-	margin-top: 20px;
-}
-.navbar ul a{
-	padding: 10px;
-    color: f1f1f1;
-    text-decoration: none;
-    margin-left: 2vw;
+.navbar a{
+	margin: 30px;
 }
 section{
-	background-color: 0c0c0c;
-	padding: 60px;
+	margin: 0;
+	height: 100%;
+	padding-left: 15%;
+	position: relative;
 }
-section h2{
-	margin-top: 50px;
-	font-size: 2.5em;
+.centered{
+	top: 50%;
+	transform: translateY(-50%);
+	position: absolute;
+}
+section h1{
+	font-size: 3em;
 	color: #f1f1f1;
+	width: auto;
+}
+#home h1{
+	font-size: 5em;
+}
+#about p{
+	margin-right: 45px;
+}
+.typingAnimation{
+	border-right: 0.15em solid #f1f1f1;
+	animation: typeanimation 1s step-end infinite;
 }
 section p{
 	color: #f1f1f1;
-	font-size: 1.2em;
-}
-::-webkit-scrollbar{
-	width: 0;
-}
-.logo{
-	height: 4em;
-	position: fixed;
-	top: 5;
 }
 .codeColor{
 	background: linear-gradient(to right, #008aff,#00ffe7);
@@ -56,32 +85,39 @@ section p{
 	-moz-animation: animate 10s ease-in-out infinite;
 	-webkit-animation: animate 10s ease-in-out infinite;
 }
-.text1{
-	margin-top: 20px;
+nav > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background: #9CF5A6;
+  visibility: hidden;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: .25s linear;
 }
-.text2{
-	margin-top: 50px;
+nav > a:hover:before,
+nav > a:focus:before {
+  visibility: visible;
+  transform: scaleX(1);
 }
-.text3{
-	margin-top: 1000px;
+@media screen and (max-width: 1100px){
+	#home h1{
+		font-size: 3em;
+	}
+	#home h3{
+		font-size: 1em;
+	}
 }
-#scrollPath{
-	position: fixed;
-	top: 0;
-	right: 0;
-	width: 10px;
-	height: 100%;
-	background: rgba(255,255,255,0.05);
-	z-index: 1000;
-}
-#progressbar{
-	position: fixed;
-	top: 0;
-	right: 0;
-	width: 10px;
-	background: linear-gradient(to top, #008aff,#00ffe7);
-	animation: animate 10s linear infinite;
-	z-index: 1000;
+@media screen and (max-width: 700px){
+	#home h1{
+		font-size: 2em;
+	}
+	#home h3{
+		width: 290px;
+	}
 }
 @keyframes animate
 {
@@ -94,23 +130,7 @@ section p{
 		filter: hue-rotate(360deg);
 	}
 }
-#progressbar:before{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(to top, #008aff,#00ffe7);
-	filter: blur(30px);	
-}
-#progressbar:after{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(to top, #008aff,#00ffe7);
-	filter: blur(30px);	
+@keyframes typeanimation{
+	from, to{ border-color: transparent }
+	50%{ border-color: f1f1f1;}
 }
