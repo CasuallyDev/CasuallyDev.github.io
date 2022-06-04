@@ -1,3 +1,13 @@
+:root{
+	--width1: 300px;
+	--width2: 250px;
+	--width3: 200px;
+	--width4: 150px;
+	--width5: 50px;
+	--top1: 200px;
+	--widthHT: 50px;
+	--height1: 15px;
+}
 *{
 	margin: 0;
 	padding: 0;
@@ -6,10 +16,114 @@
 }
 body{
 	background-color: #222222;
+	overflow-x: hidden;
 }
-ul{
+.bracketColor{
+	background: linear-gradient(to right, #008aff,#00ffe7);
+	background-size: 300%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.navbar ul, .SideMenu ul, #projects ul{
 	background: transparent;
 	list-style: none;
+}
+.codeLine1, .codeLine2, .codeLine3, .codeLine4, .codeLine5, .codeLine6, .codeLine7{
+	position: fixed;
+	margin: 20px;
+	margin-left: -40px;
+}
+.sIA1{
+	animation: slideinanimation 1.7s;
+}
+.sIA2{
+	animation: slideinanimation 1.2s;
+}
+.sIA3{
+	animation: slideinanimation 1.6s;
+}
+.sIA4{
+	animation: slideinanimation 1.25s;
+}
+.sIA5{
+	animation: slideinanimation 1.5s;
+}
+.sIA6{
+	animation: slideinanimation 1.2s;
+}
+.sIA7{
+	animation: slideinanimation 1.28s;
+}
+.sIA12{
+	animation: slideinanimation2 1.3s;
+}
+.sIA22{
+	animation: slideinanimation2 1.2s;
+}
+.sIA32{
+	animation: slideinanimation2 1.6s;
+}
+.sIA42{
+	animation: slideinanimation2 1.25s;
+}
+.sIA52{
+	animation: slideinanimation2 1.7s;
+}
+.sIA62{
+	animation: slideinanimation2 1.2s;
+}
+.sIA72{
+	animation: slideinanimation2 1.28s;
+}
+.codeLine1{
+	top: -175px;
+}
+.codeLine2{
+	top: -125px;
+}
+.codeLine3{
+	top: -75px;
+}
+.codeLine4{
+	top: 75px;
+}
+.codeLine5{
+	top: 125px;
+}
+.codeLine6{
+	top: 175px;
+}
+.codeLine7{
+	top: 225px;
+}
+.cL1, .cL2, .cL3, .cL4, .cL5, .HT{
+	height: 15px;
+	margin: 15px;
+	display: inline-block;
+}
+.HT{
+	width: 30px;
+	background: transparent;
+}
+.cL1{
+	width: 300px;
+	background: linear-gradient(to right, #008aff,#00ffe7);
+}
+.cL2{
+	width: 250px;
+	background: linear-gradient(to right, #af62fc,#fa2ddb);
+}
+.cL3{
+	width: 200px;
+	background: linear-gradient(to right, #49fcc7,#cd74fc);
+}
+.cL4{
+	width: 150px;
+	background: linear-gradient(to right, #af62fc, #fa2ddb);
+}
+.cL5{
+	width: 50px;
+	background: linear-gradient(to right, #d6c102,#56d402);
 }
 a{
 	text-decoration: none;
@@ -29,7 +143,7 @@ body{
 	z-index: 10;
 	width: 100%;
 }
-.sideMenu ul{
+.SideMenu ul{
 	display: inline-block;
 	margin-right: 20px;
 }
@@ -50,7 +164,7 @@ body{
 section{
 	margin: 0;
 	height: 100%;
-	padding-left: 15%;
+	padding-left: 10%;
 	position: relative;
 }
 .centered{
@@ -63,11 +177,37 @@ section h1{
 	color: #f1f1f1;
 	width: auto;
 }
+section{
+	height: 100%;
+}
 #home h1{
-	font-size: 5em;
+	font-size: 4em;
 }
 #about p{
 	margin-right: 45px;
+}
+#projects h1{
+	font-size: 4em;
+	background: linear-gradient(to right, #af62fc,#fa2ddb);
+	background-size: 300%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+#projects h2{
+	font-size: 3em;
+	background: linear-gradient(to right, #008aff,#af62fc);
+	background-size: 100%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	margin-top: 20px;
+}
+#projects ul{
+	font-size: 1.5em;
+	text-transform: uppercase;
+	margin-top: 10px;
+}
+#projects ul li{
+	margin-top: 10px;
 }
 .typingAnimation{
 	border-right: 0.15em solid #f1f1f1;
@@ -81,35 +221,77 @@ section p{
 	background-size: 300%;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	animation: animate 10s ease-in-out infinite;
-	-moz-animation: animate 10s ease-in-out infinite;
-	-webkit-animation: animate 10s ease-in-out infinite;
+	animation: animate 10s ease-in-out infinite, typeanimation 1s step-end infinite;
+	-moz-animation: animate 10s ease-in-out infinite, typeanimation 1s step-end infinite;
+	-webkit-animation: animate 10s ease-in-out infinite, typeanimation 1s step-end infinite;
 }
-nav > a:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  bottom: 0;
-  left: 0;
-  background: #9CF5A6;
-  visibility: hidden;
-  border-radius: 5px;
-  transform: scaleX(0);
-  transition: .25s linear;
+nav a:hover{
+	background: linear-gradient(to right, #008aff,#00ffe7);
+	background-size: 300%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: animate 10s ease-in-out infinite, typeanimation 1s step-end infinite;
+	-moz-animation: animate 10s ease-in-out infinite, typeanimation 1s step-end infinite;
+	-webkit-animation: animate 10s ease-in-out infinite, typeanimation 1s step-end infinite;
 }
-nav > a:hover:before,
-nav > a:focus:before {
-  visibility: visible;
-  transform: scaleX(1);
+nav a:active{
+	color: green;
 }
-
 @media screen and (max-width: 1100px){
-	#home h1{
+	#home h1, #projects h1{
 		font-size: 3em;
 	}
 	#home h3{
 		font-size: 1em;
+	}
+	#projects h2{
+		font-size: 2em;
+	}
+	#projects ul{
+		font-size: 1em;
+	}
+	.HT{
+		width: calc(var(--widthHT)*0.75);
+	}
+	.cL1{
+		width: calc(var(--width1)*0.75);
+	}
+	.cL2{
+		width: calc(var(--width2)*0.75);
+	}
+	.cL3{
+		width: calc(var(--width3)*0.75);
+	}
+	.cL4{
+		width: calc(var(--width4)*0.75);
+	}
+	.cL5{
+		width: calc(var(--width5)*0.75);
+	}
+	.cL1, .cL2, .cL3, .cL4, .cL5, .HT{
+	height: calc(var(--height1)*0.7);
+	margin: 5px;
+	}
+	.codeLine1{
+		top: -100;
+	}
+	.codeLine2{
+		top: -75;
+	}
+	.codeLine3{
+		top: -50;
+	}
+	.codeLine4{
+		top: 75;
+	}
+	.codeLine5{
+		top: 100;
+	}
+	.codeLine6{
+		top: 125;
+	}
+	.codeLine7{
+		top: 150;
 	}
 }
 @media screen and (max-width: 700px){
@@ -119,9 +301,57 @@ nav > a:focus:before {
 	#home h3{
 		width: 290px;
 	}
+	#projects h2{
+		font-size: 2em;
+	}
+	#projects ul{
+		font-size: 1em;
+	}
+	.HT{
+		width: calc(var(--widthHT)*0.45);
+	}
+	.cL1{
+		width: calc(var(--width1)*0.45);
+	}
+	.cL2{
+		width: calc(var(--width2)*0.45);
+	}
+	.cL3{
+		width: calc(var(--width3)*0.45);
+	}
+	.cL4{
+		width: calc(var(--width4)*0.45);
+	}
+	.cL5{
+		width: calc(var(--width5)*0.45);
+	}
+	.cL1, .cL2, .cL3, .cL4, .cL5, .HT{
+	height: calc(var(--height1)*0.6);
+	margin: 5px;
+	}
+	.codeLine1{
+		top: -100;
+	}
+	.codeLine2{
+		top: -75;
+	}
+	.codeLine3{
+		top: -50;
+	}
+	.codeLine4{
+		top: 50;
+	}
+	.codeLine5{
+		top: 75;
+	}
+	.codeLine6{
+		top: 100;
+	}
+	.codeLine7{
+		top: 125;
+	}
 }
-@keyframes animate
-{
+@keyframes animate{
 	0,100%
 	{
 		filter: hue-rotate(0deg);
@@ -134,4 +364,26 @@ nav > a:focus:before {
 @keyframes typeanimation{
 	from, to{ border-color: transparent }
 	50%{ border-color: f1f1f1;}
+}
+@keyframes slideinanimation {
+	from {
+		margin-left: -200%;
+	}
+	to {
+		margin-left: -40px;
+	}
+}
+@keyframes slideinanimation2{
+	from {
+		margin-left: -200%;
+	}
+	to {
+		margin-left: 0;
+	}	
+}
+::-webkit-scrollbar{
+	width: 10px;
+}
+::-webkit-scrollbar-thumb{
+	background: transparent;
 }
