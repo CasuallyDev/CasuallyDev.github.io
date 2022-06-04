@@ -366,18 +366,18 @@ nav a:active{
 	50%{ border-color: f1f1f1;}
 }
 @keyframes slideinanimation {
-	from {
+	0% {
 		margin-left: -200%;
 	}
-	to {
+	100% {
 		margin-left: -40px;
 	}
 }
 @keyframes slideinanimation2{
-	from {
+	0% {
 		margin-left: -200%;
 	}
-	to {
+	100% {
 		margin-left: 0;
 	}	
 }
